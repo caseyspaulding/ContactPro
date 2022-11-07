@@ -13,9 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = ConnectionHelper.GetConnectionString(builder.Configuration);
 
-var app = builder.Build();
-var scope = app.Services.CreateScope();
-await DataHelper.ManageDataAsync(scope.ServiceProvider);
+
 
 
 
