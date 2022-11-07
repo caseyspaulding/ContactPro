@@ -9,7 +9,7 @@ namespace ContactPro.Helpers
         {
             var connectionString = configuration.GetSection("pgSettings")["pgConnection"];
             var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
-            return string.IsNullOrEmpty(databaseUrl) ? connectionString : databaseUrl;
+            return string.IsNullOrEmpty(databaseUrl) ? connectionString : BuildConnectionString(databaseUrl);
         }
 
         //build the connection string from the environment. i.e. Heroku
