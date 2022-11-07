@@ -5,10 +5,16 @@ using Microsoft.EntityFrameworkCore;
 using ContactPro.Services;
 using ContactPro.Services.Interfaces;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using ContactPro.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetSection("pgSettings")["pgConnection"];
+// var connectionString = builder.Configuration.GetSection("pgSettings")["pgConnection"];
+
+var connectionString = ConnectionHelper.GetConnectionString(builder.Configuration);
+
+
+
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
