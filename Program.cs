@@ -9,13 +9,9 @@ using ContactPro.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// var connectionString = builder.Configuration.GetSection("pgSettings")["pgConnection"];
+var connectionString = builder.Configuration.GetSection("pgSettings")["pgConnection"];
 
-var connectionString = ConnectionHelper.GetConnectionString(builder.Configuration);
-
-
-
-
+//var connectionString = ConnectionHelper.GetConnectionString(builder.Configuration);
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
