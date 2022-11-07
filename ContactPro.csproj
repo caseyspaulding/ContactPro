@@ -7,7 +7,7 @@
     <UserSecretsId>aspnet-ContactPro-A6ED125A-FC9A-4913-804C-510B762CB647</UserSecretsId>
 	<BaseOutputPath>bin</BaseOutputPath>
 	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-	<InvariantGlobalisation>true</InvariantGlobalisation>
+	<InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -17,16 +17,14 @@
 		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.10" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
+			<PrivateAssests>all</PrivateAssests>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1"/>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.6" />
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgresSQL" Version="6.0.6" />
 		<PackageReference Include="MimeKit" Version="3.4.2" />
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
-		<PrivateAssests>all</PrivateAssests>
-		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		
 	</ItemGroup>
-	
-
 </Project>
