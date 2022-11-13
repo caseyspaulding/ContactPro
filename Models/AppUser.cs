@@ -14,7 +14,7 @@ namespace ContactPro.Models
     public class AppUser : IdentityUser
     {
         [Required]
-        [Display(Name = "First Name")]
+        [Display(Name = "First Name ")]
         [StringLength(50,ErrorMessage = "The {0} must be at least {2} and a max {1} characters."),MinLength(2)]
         public string? FirstName { get; set; }
 
@@ -24,7 +24,7 @@ namespace ContactPro.Models
         public string? LastName { get; set; }
 
         [NotMapped]
-        public string? FullName { get { return $"{FirstName} {LastName}"; } }
+        public string? FullName { get { return $"{FirstName } {LastName}"; } }
         //allows a user to include its related contacts
         public virtual ICollection<Contact> Contacts { get; set; } = new HashSet<Contact>();
 
